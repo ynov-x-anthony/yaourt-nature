@@ -17,7 +17,11 @@ Une fois le dépôt cloné, tapez :
 ```bash
 cd yaourt-nature
 ```
-Et : 
+Puis : 
+```bash
+npm install
+```
+Et enfin :
 ```bash
 npm run dev
 ```

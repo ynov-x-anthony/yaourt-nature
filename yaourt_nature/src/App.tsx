@@ -3,6 +3,7 @@ import Movie from './components/Movie';
 import NavBar from './components/Navbar'
 import { useState } from "react";
 
+// Liste des films à mapper pour les composants.
 const movies = [
   {
     "id": 1,
@@ -70,15 +71,23 @@ const movies = [
 ]
 
 function App() {
-
+  // Initialisation du state movieId. 
+  // Ce state sert à changer les données envoyées au composant Movie pour changer l'affichage. 
+  // Il est initialisé à 1, qui est l'id du 1er film, donc quand on recharge la page, on tombe sur la 
+  // page du 1er film. 
+  // setMoveId est une fonction qui sert à changer la valeur du state.
   const [movieId, setMovieId] = useState(1);
   
+  // Cette ligne sert à chercher un film en fonction de son id. 
+  // L'id est récupéré par le state 'movieId' au dessus.
   const movie = movies.find((movie) => movie.id === movieId);
 
+  // Gestion d'erreur si aucun film n'est trouvé.
   if (movie == null) {
     throw new Error("Invalid movie id");
   }
 
+  // On renvoie les composants dans un fragment.
   return (
     <>
       <NavBar moviesList={movies} setMovieId={setMovieId}/>

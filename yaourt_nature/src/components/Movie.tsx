@@ -1,3 +1,4 @@
+// Interface pour typer les props reçus dans le composant Movie.
 interface MovieProps {
     id: number
     imgURL: string
