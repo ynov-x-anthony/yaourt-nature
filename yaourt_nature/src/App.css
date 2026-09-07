@@ -204,3 +204,6 @@ img {
   margin: 7px;
   padding: 5px 7px;
 }
+.movie-select-btn:hover {
+  cursor: url('./assets/normal.cur') 0 0, auto;
+}
