@@ -182,3 +182,25 @@
     border-right-color: var(--border);
   }
 }
+
+
+img {
+  width: 350px;
+  margin: 20px;
+}
+
+.length-caption {
+  font-style: italic;
+  font-size: 16px;
+  margin: 15px;
+}
+
+.desc-caption {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.movie-select-btn {
+  margin: 7px;
+  padding: 5px 7px;
+}

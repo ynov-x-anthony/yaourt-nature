@@ -1,27 +1,24 @@
-// import "./Navbar.css";
-
-interface NavbarProps {
-    title: string;
+interface MovieProps {
+    id: number
+    imgURL: string
+    title: string
+    length: number
+    desc: string
 }
 
-function Navbar(props: NavbarProps) {
-    return (
-   <nav className="navbar" aria-label="Navigation principale">
-            <a href="#acceuil" className="navbar-title">
-                {props.title}
-            </a>
+interface NavbarProps {
+    moviesList: MovieProps[]
+    setMovieId: (movieId: number) => void
+}
 
-            <ul className="navbar-links">
-                <li>
-                    <a href="#acceuil">Accueil</a>
-                </li>
-            
-                <li>
-                    <a href="#films">Films</a>
-                </li>
-                </ul>
+function Navbar({moviesList, setMovieId}: NavbarProps) {
+    return (
+        <nav className="navbar">
+            {moviesList.map ((movie) => (
+            <button className="movie-select-btn" key={movie.title} type='button' onClick={() => setMovieId(movie.id)}>{movie.id}</button>
+            ))}
         </nav>
-    );
+    )
 }
 
 export default Navbar;

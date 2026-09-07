@@ -1,19 +1,19 @@
 interface MovieProps {
-    "id": number,
-    "imgURL"?: string,
-    "title": string,
-    "length": number,
-    "desc": string
+    id: number
+    imgURL: string
+    title: string
+    length: number
+    desc: string
 }
 
 function Movie({imgURL, title, length, desc}: MovieProps) {
     return (
-        <>
+        <div className="movie-container">
             <img src={imgURL} />
             <h1>{title}</h1>
-            <p>{length} Minutes</p>
-            <p>{desc}</p>
-        </>      
+            <p className="length-caption">{length} Minutes</p>
+            <p className="desc-caption">{desc}</p>
+        </div>      
     )
 }
 
